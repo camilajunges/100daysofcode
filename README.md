@@ -9,7 +9,7 @@ The **#100DaysOfCode** challenge is designed to build coding skills through cons
 ### 📚 Course Overview
 - **Duration**: 100 Days
 - **Daily Commitment**: 1-2 hours
-- **Content**: 56+ hours of HD video tutorials
+- **Content**: 56+ hours of video tutorials
 - **Projects**: 100 hands-on coding projects
 - **Level**: Beginner to Professional
 
@@ -40,9 +40,7 @@ The curriculum is structured to take me from complete beginner to professional d
 I'm committed to documenting my journey through:
 
 - ✅ Daily code commits to this repository
-- 🐦 Progress updates on Twitter with **#100DaysOfCode**
 - 📝 Project documentation and reflections
-- 🔗 Live demos and portfolio pieces
 
 ## 🎯 Goals
 
