@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rollercoaster Flowchart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+        }
+        .flow-node {
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .flow-node:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+        .flow-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .connector {
+            width: 4px;
+            height: 2rem;
+            background-color: #cbd5e1;
+            margin: 0 auto;
+            position: relative;
+        }
+        .connector::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #cbd5e1;
+        }
+        .decision-connector {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .decision-connector .line {
+            width: 4px;
+            height: 2rem;
+            background-color: #cbd5e1;
+            position: relative;
+        }
+        .decision-connector .line::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #cbd5e1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="flow-container bg-white rounded-3xl shadow-2xl p-8 lg:p-12 max-w-5xl w-full">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-10">
+            🎢 Rollercoaster Ticket Flowchart
+        </h1>
+
+        <!-- Start Node -->
+        <div class="flow-node bg-green-100 text-green-800 shadow-lg">
+            <i class="fas fa-play flow-icon"></i>
+            <p class="text-lg font-semibold">Start</p>
+        </div>
+        <div class="connector"></div>
+
+        <!-- Input Node -->
+        <div class="flow-node bg-blue-100 text-blue-900 shadow-lg">
+            <i class="fas fa-keyboard flow-icon"></i>
+            <p class="text-lg font-semibold">Get User Input:<br>Height & Age</p>
+        </div>
+        <div class="connector"></div>
+
+        <!-- Decision 1 -->
+        <div class="flow-node bg-yellow-100 text-yellow-900 shadow-lg">
+            <i class="fas fa-question-circle flow-icon"></i>
+            <p class="text-lg font-semibold">Is Height ≥ 120cm?</p>
+        </div>
+        <div class="decision-connector my-2">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- YES branch -->
+            <div class="flex-1">
+                <p class="text-center font-bold text-green-700">Yes</p>
+                <div class="connector h-4"></div>
+                <div class="flow-node bg-yellow-100 text-yellow-900 shadow-lg">
+                    <i class="fas fa-question-circle flow-icon"></i>
+                    <p class="text-lg font-semibold">Determine Ticket Price based on Age</p>
+                </div>
+                <div class="connector"></div>
+                <div class="flow-node bg-blue-100 text-blue-900 shadow-lg">
+                    <i class="fas fa-camera-retro flow-icon"></i>
+                    <p class="text-lg font-semibold">Ask for Photo</p>
+                </div>
+                <div class="connector"></div>
+                <div class="flow-node bg-yellow-100 text-yellow-900 shadow-lg">
+                    <i class="fas fa-question-circle flow-icon"></i>
+                    <p class="text-lg font-semibold">Wants Photo?</p>
+                </div>
+                <div class="decision-connector my-2">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="flex-1">
+                        <p class="text-center font-bold text-green-700">Yes</p>
+                        <div class="connector h-4"></div>
+                        <div class="flow-node bg-green-50 text-green-900 shadow-lg">
+                            <i class="fas fa-dollar-sign flow-icon"></i>
+                            <p class="text-lg font-semibold">Add $3 to bill</p>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-center font-bold text-red-700">No</p>
+                        <div class="connector h-4"></div>
+                        <div class="flow-node border-2 border-gray-300 bg-gray-50 text-gray-600 shadow-lg">
+                            <p class="text-lg font-semibold">Continue to next step</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="connector"></div>
+                <div class="flow-node bg-indigo-100 text-indigo-900 shadow-lg">
+                    <i class="fas fa-receipt flow-icon"></i>
+                    <p class="text-lg font-semibold">Print Final Bill</p>
+                </div>
+            </div>
+
+            <!-- NO branch -->
+            <div class="flex-1">
+                <p class="text-center font-bold text-red-700">No</p>
+                <div class="connector h-4"></div>
+                <div class="flow-node bg-red-100 text-red-900 shadow-lg">
+                    <i class="fas fa-times-circle flow-icon"></i>
+                    <p class="text-lg font-semibold">Print "Too short" message</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="connector"></div>
+        <div class="flow-node bg-red-100 text-red-900 shadow-lg">
+            <i class="fas fa-flag-checkered flow-icon"></i>
+            <p class="text-lg font-semibold">End</p>
+        </div>
+    </div>
+
+</body>
+</html>
