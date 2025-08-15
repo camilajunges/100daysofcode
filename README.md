@@ -93,7 +93,8 @@ Follow my coding journey:
 
 | Day |        Project      | Technologies | Status |
 |-----|---------------------|--------------|--------|
-| 001 | Band Name Generator |    Python    |   ✅  |
-| ... | ... | ... | ... |
+| 001 | Band Name Generator | Python       |   ✅  |
+| 002 | Tip Calculator      | Python       |   ✅  |
+| 003 | Treasure Island     | Python       |   ✅  |
 
 *This table will be updated daily with my progress*
