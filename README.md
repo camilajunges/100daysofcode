@@ -98,6 +98,6 @@ Follow my coding journey:
 | 003 | Treasure Island       | Python       |   ✅  |
 | 004 | Rock, paper, scissors | Python       |   ✅  |
 | 005 | Password Generator    | Python       |   ✅  |
-| 006 | Scaping Maze          | Python       |   ✅  |
+| 006 | Escaping Maze         | Python       |   ✅  |
 
 *This table will be updated daily with my progress*
