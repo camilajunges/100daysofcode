@@ -85,16 +85,19 @@ Follow my coding journey:
 
 **Start Date**: 08/14/2025
 **Expected Completion**: 11/22/2025
-**Current Day**: 08/15/2025
+**Current Day**: 08/19/2025
 
 ---
 
 ###  Daily Progress Log
 
-| Day |        Project      | Technologies | Status |
-|-----|---------------------|--------------|--------|
-| 001 | Band Name Generator | Python       |   ✅  |
-| 002 | Tip Calculator      | Python       |   ✅  |
-| 003 | Treasure Island     | Python       |   ✅  |
+| Day |        Project        | Technologies | Status |
+|-----|-----------------------|--------------|--------|
+| 001 | Band Name Generator   | Python       |   ✅  |
+| 002 | Tip Calculator        | Python       |   ✅  |
+| 003 | Treasure Island       | Python       |   ✅  |
+| 004 | Rock, paper, scissors | Python       |   ✅  |
+| 005 | Password Generator    | Python       |   ✅  |
+| 006 | Escaping Maze         | Python       |   ✅  |
 
 *This table will be updated daily with my progress*
