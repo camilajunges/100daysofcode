@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python List Methods</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        h1 {
+            border-bottom: none;
+            text-align: center;
+            color: #1a2b3c;
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        .method {
+            margin-bottom: 1.5rem;
+        }
+        .method-name {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #c0392b;
+            font-weight: bold;
+        }
+        pre {
+            background: #2d3436;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .output {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 1rem;
+            border-left: 5px solid #4caf50;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        .note {
+            background-color: #fff3e0;
+            color: #ff9800;
+            padding: 1rem;
+            border-left: 5px solid #ff9800;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Python List Methods: A Comprehensive Guide</h1>
+    <p>Python lists are one of the most fundamental and versatile data structures. They come with a rich set of built-in methods that allow you to easily manipulate and manage your data. Let's explore each one with clear code examples and their corresponding output.</p>
+
+    <h2>Adding and Inserting Elements</h2>
+
+    <div class="method">
+        <h3>1. <span class="method-name">append(element)</span></h3>
+        <p>Adds a single element to the end of the list. This is the most common way to grow a list.</p>
+        <pre><code>
+fruits = ['apple', 'banana', 'cherry']
+fruits.append('strawberry')
+print(fruits)
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>['apple', 'banana', 'cherry', 'strawberry']</code></pre>
+        </div>
+    </div>
+
+    <div class="method">
+        <h3>2. <span class="method-name">extend(iterable)</span></h3>
+        <p>Extends the list by appending all the elements from an iterable (like another list, tuple, or string) to the end of the current list.</p>
+        <pre><code>
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+list1.extend(list2)
+print(list1)
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
+        </div>
+    </div>
+
+    <div class="method">
+        <h3>3. <span class="method-name">insert(index, element)</span></h3>
+        <p>Inserts an element at a specific position in the list. The first argument is the index where the element will be placed, and the second is the element itself.</p>
+        <pre><code>
+numbers = [10, 20, 40, 50]
+numbers.insert(2, 30)  # Inserts 30 at index 2
+print(numbers)
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>[10, 20, 30, 40, 50]</code></pre>
+        </div>
+    </div>
+
+     
+
+    <h2>Removing Elements</h2>
+
+    <div class="method">
+        <h3>4. <span class="method-name">remove(element)</span></h3>
+        <p>Removes the <strong>first occurrence</strong> of a specified element. If the element is not found, a <code>ValueError</code> is raised.</p>
+        <pre><code>
+letters = ['a', 'b', 'c', 'b', 'd']
+letters.remove('b')
+print(letters)
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>['a', 'c', 'b', 'd']</code></pre>
+        </div>
+    </div>
+
+    <div class="method">
+        <h3>5. <span class="method-name">pop([index])</span></h3>
+        <p>Removes and returns the element at a specific index. If no index is provided, it removes and returns the last element of the list.</p>
+        <pre><code>
+items = ['pencil', 'notebook', 'pen', 'eraser']
+removed_item = items.pop(1)
+print(f"List after pop: {items}")
+print(f"Item removed: {removed_item}")
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>List after pop: ['pencil', 'pen', 'eraser']
+Item removed: notebook</code></pre>
+        </div>
+    </div>
+
+    <div class="method">
+        <h3>6. <span class="method-name">clear()</span></h3>
+        <p>Removes all elements from the list, making it empty.</p>
+        <pre><code>
+full_list = [1, 2, 3, 4, 5]
+full_list.clear()
+print(full_list)
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>[]</code></pre>
+        </div>
+    </div>
+
+     
+
+    <h2>Searching and Counting Elements</h2>
+
+    <div class="method">
+        <h3>7. <span class="method-name">index(element)</span></h3>
+        <p>Returns the index of the <strong>first occurrence</strong> of an element. A <code>ValueError</code> is raised if the element is not found.</p>
+        <pre><code>
+colors = ['blue', 'red', 'green', 'yellow', 'red']
+position_of_red = colors.index('red')
+print(f"The first 'red' is at index: {position_of_red}")
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>The first 'red' is at index: 1</code></pre>
+        </div>
+    </div>
+
+    <div class="method">
+        <h3>8. <span class="method-name">count(element)</span></h3>
+        <p>Returns the number of times a specific element appears in the list.</p>
+        <pre><code>
+numbers = [1, 2, 3, 2, 4, 2, 5]
+count_of_2 = numbers.count(2)
+print(f"The number 2 appears {count_of_2} times.")
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>The number 2 appears 3 times.</code></pre>
+        </div>
+    </div>
+
+     
+
+    <h2>Reorganizing and Copying Lists</h2>
+
+    <div class="method">
+        <h3>9. <span class="method-name">sort()</span></h3>
+        <p>Sorts the elements of the list <strong>in place</strong> (modifies the original list). The default order is ascending, but you can reverse it with the <code>reverse=True</code> argument.</p>
+        <pre><code>
+numbers = [3, 1, 4, 1, 5, 9, 2]
+numbers.sort()
+print(f"Ascending order: {numbers}")
+
+numbers.sort(reverse=True)
+print(f"Descending order: {numbers}")
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>Ascending order: [1, 1, 2, 3, 4, 5, 9]
+Descending order: [9, 5, 4, 3, 2, 1, 1]</code></pre>
+        </div>
+    </div>
+
+    <div class="method">
+        <h3>10. <span class="method-name">reverse()</span></h3>
+        <p>Reverses the order of the elements in the list <strong>in place</strong>. The first element becomes the last, and so on.</p>
+        <pre><code>
+letters = ['a', 'b', 'c', 'd']
+letters.reverse()
+print(letters)
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>['d', 'c', 'b', 'a']</code></pre>
+        </div>
+    </div>
+
+    <div class="method">
+        <h3>11. <span class="method-name">copy()</span></h3>
+        <p>Returns a <strong>shallow copy</strong> of the list. This is crucial for creating an independent list that won't be affected by changes to the original.</p>
+        <pre><code>
+original_list = [1, 2, 3]
+copied_list = original_list.copy()
+copied_list.append(4)
+
+print(f"Original list: {original_list}")
+print(f"Copied list: {copied_list}")
+        </code></pre>
+        <div class="output">
+            Output:
+            <pre><code>Original list: [1, 2, 3]
+Copied list: [1, 2, 3, 4]</code></pre>
+        </div>
+        <div class="note">
+            <p><strong>Note:</strong> A simple assignment like <code>copied_list = original_list</code> creates a reference, not a copy. Changes to one list would affect the other.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
