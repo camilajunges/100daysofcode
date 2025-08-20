@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Functions Board</title>
+    <!-- Use Tailwind CSS for a beautiful, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a cleaner look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-8 min-h-screen flex items-center justify-center">
+
+    <!-- Main container for the content board -->
+    <div class="container mx-auto max-w-7xl">
+        <h1 class="text-4xl sm:text-5xl font-bold text-center mb-12 drop-shadow-lg text-gray-900">Python Built-in Functions</h1>
+
+        <!-- Grid layout for the function cards -->
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+            <!-- Card for `print()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">print()</h2>
+                <p class="text-sm text-gray-600 mb-4">Prints the specified message to the screen or to a file.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">print("Hello, World!")</code></pre>
+                </div>
+            </div>
+
+            <!-- Card for `len()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">len()</h2>
+                <p class="text-sm text-gray-600 mb-4">Returns the number of items in an object.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">my_list = [1, 2, 3]
+length = len(my_list)
+# length is 3</code></pre>
+                </div>
+            </div>
+
+            <!-- Card for `type()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">type()</h2>
+                <p class="text-sm text-gray-600 mb-4">Returns the type of the specified object.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">my_var = "hello"
+print(type(my_var))
+# <class 'str'></code></pre>
+                </div>
+            </div>
+
+            <!-- Card for `range()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">range()</h2>
+                <p class="text-sm text-gray-600 mb-4">Generates a sequence of numbers, useful for loops.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">for i in range(3):
+    print(i)
+# 0, 1, 2</code></pre>
+                </div>
+            </div>
+
+            <!-- Card for `input()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">input()</h2>
+                <p class="text-sm text-gray-600 mb-4">Reads a line from the user input.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">name = input("Enter your name: ")
+print("Hello, " + name)</code></pre>
+                </div>
+            </div>
+
+            <!-- Card for `sum()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">sum()</h2>
+                <p class="text-sm text-gray-600 mb-4">Returns the sum of all items in an iterable.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">numbers = [1, 2, 3, 4]
+total = sum(numbers)
+# total is 10</code></pre>
+                </div>
+            </div>
+
+            <!-- Card for `sorted()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">sorted()</h2>
+                <p class="text-sm text-gray-600 mb-4">Returns a new sorted list from the items in an iterable.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">a = [3, 1, 2]
+b = sorted(a)
+# b is [1, 2, 3]</code></pre>
+                </div>
+            </div>
+
+            <!-- Card for `int()` and `str()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">int() / str()</h2>
+                <p class="text-sm text-gray-600 mb-4">Converts values to integer or string types.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">num = int("10")
+text = str(100)</code></pre>
+                </div>
+            </div>
+
+            <!-- New card for `min()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">min()</h2>
+                <p class="text-sm text-gray-600 mb-4">Returns the item with the lowest value.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">numbers = [5, 1, 9, 2]
+lowest = min(numbers)
+# lowest is 1</code></pre>
+                </div>
+            </div>
+
+            <!-- New card for `max()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">max()</h2>
+                <p class="text-sm text-gray-600 mb-4">Returns the item with the highest value.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">numbers = [5, 1, 9, 2]
+highest = max(numbers)
+# highest is 9</code></pre>
+                </div>
+            </div>
+
+            <!-- New card for `abs()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">abs()</h2>
+                <p class="text-sm text-gray-600 mb-4">Returns the absolute value of a number.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">x = abs(-7.25)
+# x is 7.25</code></pre>
+                </div>
+            </div>
+
+            <!-- New card for `round()` -->
+            <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                <h2 class="text-2xl font-semibold mb-2 text-indigo-600">round()</h2>
+                <p class="text-sm text-gray-600 mb-4">Rounds a number to a specified number of decimals.</p>
+                <div class="bg-gray-100 p-4 rounded-xl text-xs overflow-x-auto">
+                    <pre><code class="language-python">x = round(5.7654, 2)
+# x is 5.77</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
