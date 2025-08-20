@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Functions Board</title>
-    <!-- Use Tailwind CSS for a beautiful, responsive design -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles for a cleaner look */
@@ -16,14 +15,11 @@
 </head>
 <body class="bg-gray-50 text-gray-800 p-8 min-h-screen flex items-center justify-center">
 
-    <!-- Main container for the content board -->
     <div class="container mx-auto max-w-7xl">
         <h1 class="text-4xl sm:text-5xl font-bold text-center mb-12 drop-shadow-lg text-gray-900">Python Built-in Functions</h1>
 
-        <!-- Grid layout for the function cards -->
         <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
-            <!-- Card for `print()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">print()</h2>
                 <p class="text-sm text-gray-600 mb-4">Prints the specified message to the screen or to a file.</p>
@@ -32,7 +28,6 @@
                 </div>
             </div>
 
-            <!-- Card for `len()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">len()</h2>
                 <p class="text-sm text-gray-600 mb-4">Returns the number of items in an object.</p>
@@ -43,7 +38,6 @@ length = len(my_list)
                 </div>
             </div>
 
-            <!-- Card for `type()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">type()</h2>
                 <p class="text-sm text-gray-600 mb-4">Returns the type of the specified object.</p>
@@ -54,7 +48,6 @@ print(type(my_var))
                 </div>
             </div>
 
-            <!-- Card for `range()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">range()</h2>
                 <p class="text-sm text-gray-600 mb-4">Generates a sequence of numbers, useful for loops.</p>
@@ -65,7 +58,6 @@ print(type(my_var))
                 </div>
             </div>
 
-            <!-- Card for `input()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">input()</h2>
                 <p class="text-sm text-gray-600 mb-4">Reads a line from the user input.</p>
@@ -75,7 +67,6 @@ print("Hello, " + name)</code></pre>
                 </div>
             </div>
 
-            <!-- Card for `sum()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">sum()</h2>
                 <p class="text-sm text-gray-600 mb-4">Returns the sum of all items in an iterable.</p>
@@ -86,7 +77,6 @@ total = sum(numbers)
                 </div>
             </div>
 
-            <!-- Card for `sorted()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">sorted()</h2>
                 <p class="text-sm text-gray-600 mb-4">Returns a new sorted list from the items in an iterable.</p>
@@ -97,7 +87,6 @@ b = sorted(a)
                 </div>
             </div>
 
-            <!-- Card for `int()` and `str()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">int() / str()</h2>
                 <p class="text-sm text-gray-600 mb-4">Converts values to integer or string types.</p>
@@ -107,7 +96,6 @@ text = str(100)</code></pre>
                 </div>
             </div>
 
-            <!-- New card for `min()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">min()</h2>
                 <p class="text-sm text-gray-600 mb-4">Returns the item with the lowest value.</p>
@@ -118,7 +106,6 @@ lowest = min(numbers)
                 </div>
             </div>
 
-            <!-- New card for `max()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">max()</h2>
                 <p class="text-sm text-gray-600 mb-4">Returns the item with the highest value.</p>
@@ -129,7 +116,6 @@ highest = max(numbers)
                 </div>
             </div>
 
-            <!-- New card for `abs()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">abs()</h2>
                 <p class="text-sm text-gray-600 mb-4">Returns the absolute value of a number.</p>
@@ -139,7 +125,6 @@ highest = max(numbers)
                 </div>
             </div>
 
-            <!-- New card for `round()` -->
             <div class="card-item bg-white p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <h2 class="text-2xl font-semibold mb-2 text-indigo-600">round()</h2>
                 <p class="text-sm text-gray-600 mb-4">Rounds a number to a specified number of decimals.</p>
@@ -149,6 +134,84 @@ highest = max(numbers)
                 </div>
             </div>
 
+        </div>
+
+        <div class="mt-12 bg-white p-8 rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-center mb-6 text-gray-900">Creating and Using Your Own Functions</h2>
+            <p class="text-gray-600 mb-6 text-center max-w-2xl mx-auto">
+                In addition to Python's built-in functions, you can create your own functions to reuse a block of code. They help organize your project and avoid repetition.
+            </p>
+            
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">1. Standard for Creating a Function</h3>
+                    <p class="text-gray-600 mb-4">
+                        A function is defined with the <b>def</b> keyword, followed by the function name, parentheses <b>()</b> and a colon <b>:</b>. The code inside it must be indented.
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded-xl text-sm overflow-x-auto">
+                        <pre><code class="language-python"># Function definition
+def my_function():
+    print("Hello, I am a function!")
+</code></pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">2. Parameters and Arguments</h3>
+                    <p class="text-gray-600 mb-4">
+                        For a function to use outside data, it receives <b>parameters</b>. When you call it, you pass the <b>arguments</b>.
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded-xl text-sm overflow-x-auto">
+                        <pre><code class="language-python"># Function with a parameter
+def greeting(name):
+    print(f"Hello, {name}!")
+
+# Calling the function with an argument
+greeting("Maria") 
+# Output: Hello, Maria!
+</code></pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">3. Returning Values with <code>return</code></h3>
+                    <p class="text-gray-600 mb-4">
+                        The <b>return</b> command is used for the function to return a value.
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded-xl text-sm overflow-x-auto">
+                        <pre><code class="language-python"># Function that returns a value
+def add(a, b):
+    result = a + b
+    return result
+
+# Calling the function and using the returned value
+total_sum = add(5, 3)
+print(total_sum)
+# Output: 8
+</code></pre>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2 text-indigo-600">Complete Example</h3>
+                    <p class="text-gray-600 mb-4">
+                        See how it all fits together in a practical example.
+                    </p>
+                    <div class="bg-gray-100 p-4 rounded-xl text-sm overflow-x-auto">
+                        <pre><code class="language-python"># Function definition
+def sum_numbers(a, b):
+    return a + b
+
+# Getting user inputs
+a = int(input("Choose a number: "))
+b = int(input("Choose another number: "))
+
+# Calling the function with user inputs
+print(f"The sum between {a} and {b} is: {sum_numbers(a, b)}")
+</code></pre>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

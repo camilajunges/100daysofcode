@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escaping Maze</title>
+    <style>
+        /* General body styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #1a202c; /* Dark background */
+            font-family: 'Arial', sans-serif;
+            color: #e2e8f0; /* Light text color */
+        }
+
+        .maze-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            color: #63b3ed; /* A nice blue for the title */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Container for the maze */
+        .maze-container {
+            display: grid;
+            grid-template-columns: repeat(20, 20px);
+            grid-template-rows: repeat(20, 20px);
+            border: 5px solid #4a5568; /* Dark border around the maze */
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+            background-color: #2d3748; /* Slightly lighter background for the maze grid */
+        }
+
+        /* Styling for the maze walls */
+        .wall {
+            background-color: #4a5568; /* Wall color */
+            border-radius: 2px;
+            margin: 1px;
+        }
+
+        /* Styling for the maze path */
+        .path {
+            background-color: transparent;
+        }
+
+        /* Styling for the start and end points */
+        .start {
+            background-color: #48bb78; /* Green for start */
+            border-radius: 50%; /* Circle shape */
+            animation: pulse 1.5s infinite;
+        }
+
+        .end {
+            background-color: #f56565; /* Red for end */
+            border-radius: 50%; /* Circle shape */
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Keyframes for the pulsing animation */
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            .maze-container {
+                grid-template-columns: repeat(20, 15px);
+                grid-template-rows: repeat(20, 15px);
+            }
+            .maze-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="maze-title">Escaping Maze</h1>
+    <div class="maze-container">
+        <!-- The grid is defined by a series of divs. The classes determine if it's a wall, start, or end point. -->
+        <!-- Row 1 -->
+        <div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div>
+        <!-- Row 2 -->
+        <div class="wall"></div><div class="start"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 3 -->
+        <div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 4 -->
+        <div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 5 -->
+        <div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div>
+        <!-- Row 6 -->
+        <div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 7 -->
+        <div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 8 -->
+        <div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 9 -->
+        <div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div>
+        <!-- Row 10 -->
+        <div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 11 -->
+        <div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 12 -->
+        <div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 13 -->
+        <div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 14 -->
+        <div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 15 -->
+        <div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div>
+        <!-- Row 16 -->
+        <div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 17 -->
+        <div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 18 -->
+        <div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="wall"></div>
+        <!-- Row 19 -->
+        <div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="path"></div><div class="wall"></div><div class="wall"></div>
+        <!-- Row 20 -->
+        <div class="wall"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="path"></div><div class="end"></div><div class="wall"></div>
+    </div>
+</body>
+</html>

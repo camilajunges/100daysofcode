@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indentation in Python</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .container-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #4338ca;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+        .code-block {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-8 min-h-screen flex items-center justify-center">
+
+    <div class="container mx-auto max-w-7xl">
+        <h1 class="text-4xl sm:text-5xl font-bold text-center mb-12 drop-shadow-lg text-gray-900">Indentation in Python</h1>
+
+        <div class="container-content">
+            <p class="text-sm sm:text-base text-gray-600 mb-6">
+                In Python, <b>indentation</b> is more than just a style convention; it's a fundamental part of the language's syntax. It is used to define the structure of code blocks, replacing the need for curly braces or keywords found in other languages.
+            </p>
+
+            <div class="mb-8">
+                <h2 class="section-title">The Basic Concept</h2>
+                <p class="text-sm sm:text-base text-gray-600">
+                    Indentation is what tells the Python interpreter that a line of code belongs to a specific block, such as an `if` statement, <code>for</code> loop, or a function definition. All statements within the same block must have the same level of indentation.
+                </p>
+                <div class="code-block">
+                    <pre><code class="language-python"># Example of an 'if' block
+if 5 > 2:
+    print("Five is greater than two!")
+    print("This line is also part of the 'if' block.")
+    # The two print statements are indented with the same number of spaces.</code></pre>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="section-title">Standard Practice: 4 Spaces</h2>
+                <p class="text-sm sm:text-base text-gray-600">
+                    The official Python style guide, <b>PEP 8</b>, recommends using <b>4 spaces</b> for each level of indentation. This standard ensures code readability and consistency across different projects and development environments. While some editors may allow tabs, mixing tabs and spaces can lead to an <code>IndentationError</code>.
+                </p>
+                <div class="code-block">
+                    <pre><code class="language-python"># Example following the 4-space rule
+def calculate_area(length, width):
+    # This line has 4 spaces of indentation.
+    area = length * width
+    # This line also has 4 spaces.
+    return area</code></pre>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="section-title">Common Errors</h2>
+                <p class="text-sm sm:text-base text-gray-600">
+                    One of the most frequent mistakes for beginners is the <b><code>IndentationError</code></b>. This happens when the indentation is inconsistent or incorrect, and it's a syntax error that will prevent your code from running.
+                </p>
+                <div class="code-block">
+                    <pre><code class="language-python"># This code will cause an IndentationError.
+for i in range(2):
+    print("Correct indentation.")
+  print("Incorrect indentation.") # This line has a different number of spaces.</code></pre>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="section-title">Nesting Code Blocks</h2>
+                <p class="text-sm sm:text-base text-gray-600">
+                    Indentation is crucial for defining nested structures. Each nested block of code requires an additional level of indentation. This visual hierarchy makes the flow of control within your program clear and easy to follow.
+                </p>
+                <div class="code-block">
+                    <pre><code class="language-python"># Example of nested loops with correct indentation
+for x in range(2):
+    for y in range(2):
+        print(f"({x}, {y})")
+        # The print statement is indented two levels (8 spaces).</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
